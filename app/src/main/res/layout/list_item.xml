@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_recycler_view_CL"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/itemIV"
+        android:layout_width="95dp"
+        android:layout_height="80dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/outOfStorkBT"
+        android:background="@drawable/image_view_border"
+        android:src="@drawable/ic_outline_person_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/nameCategoryLL"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/itemIV"
+        app:layout_constraintEnd_toStartOf="@id/priceLL"
+        app:layout_constraintStart_toEndOf="@id/itemIV"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Nike"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#A1A1A1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="220dp"
+            android:text="Descriptionckndjcn sjckn vjkn vkjn vjkvn jdvn dljvn kln vjkn vjkdfn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/priceLL"
+        android:layout_width="wrap_content"
+        android:padding="15dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/itemIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameCategoryLL"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/priceStoreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFD600"
+            android:text="\u20B9200"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/priceMarketTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#A1A1A1"
+            android:background="@drawable/strike_through"
+            android:textSize="20sp"
+            android:text="\u20B9180"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/itemIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemIV"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/outOfStorkBT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_baseline_no_stroller_24"
+        app:iconGravity="textStart"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemIV"
+        app:layout_constraintEnd_toStartOf="@id/oneThirdGuideline"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editBT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_outline_edit_24"
+        app:iconGravity="textStart"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/oneThirdGuideline"
+        app:layout_constraintTop_toBottomOf="@id/itemIV"
+        app:layout_constraintEnd_toStartOf="@id/twoThirdGuideline"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteBT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_drawable3"
+        app:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_baseline_delete_24"
+        app:iconGravity="textStart"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/twoThirdGuideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/oneThirdGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/twoThirdGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

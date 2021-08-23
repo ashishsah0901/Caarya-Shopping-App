@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragmentShopping2">
+
+    <fragment
+        android:id="@+id/fragmentShopping2"
+        android:name="com.example.caaryainternshiptask.ui.fragment.FragmentShopping"
+        android:label="FragmentShopping" >
+        <action
+            android:id="@+id/action_fragmentShopping2_to_fragmentNewItem"
+            app:destination="@id/fragmentNewItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome2"
+        android:name="com.example.caaryainternshiptask.ui.fragment.FragmentHome"
+        android:label="FragmentHome" />
+    <fragment
+        android:id="@+id/fragmentList2"
+        android:name="com.example.caaryainternshiptask.ui.fragment.FragmentList"
+        android:label="FragmentList" />
+    <fragment
+        android:id="@+id/fragmentNewItem"
+        android:name="com.example.caaryainternshiptask.ui.fragment.FragmentNewItem"
+        android:label="FragmentNewItem" >
+        <argument
+            android:name="shopping_item"
+            app:argType="com.example.caaryainternshiptask.db.ShoppingItem"
+            app:nullable="true"/>
+    </fragment>
+</navigation>
